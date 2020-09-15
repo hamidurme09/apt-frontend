@@ -1,0 +1,67 @@
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+@import '../../styles/mixins';
+
+@mixin glideArrow {
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 36px;
+    height: 44px;
+    padding: 0;
+
+    top: 28%;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      top: 35%;
+    }
+}
+
+$arrow-left-left: -10px;
+$arrow-right-right: -10px;
+
+.glide {
+
+  .glide__track {
+    transform: translateZ(0px);
+    transform: translate3d(0,0,0);
+    perspective: 1000;
+  }
+
+  .glide__arrow {
+    @include glideArrow();
+  }
+
+  .glide__arrow--right {
+    right: $arrow-right-right;
+  }
+
+  .glide__arrow--left {
+    left: $arrow-left-left;
+  }
+
+  .left-arrow-click-jacker {
+    @include glideArrow();
+
+    left: $arrow-left-left;
+    opacity: 0;
+  }
+
+  .right-arrow-click-jacker {
+    @include glideArrow();
+
+    right: $arrow-right-right;
+    opacity: 0;
+  }
+}

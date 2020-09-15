@@ -1,0 +1,127 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.listing-table-component {
+  table {
+    width: 100%;
+
+    thead {
+      font-weight: bold;
+
+      &.mobile-only {
+        display: none;
+
+        @include for-size(desktop-up) {
+          display: table-header-group;
+        }
+      }
+
+      td {
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid #d8d8d8;
+
+        &:hover {
+          background-color: rgba(0,0,0, 0.03);
+        }
+      }
+    }
+
+    td {
+      height: 47px;
+      padding: 0 1rem;
+
+      &.mobile-only {
+        display: table-cell;
+        font-size: $font-size-sm;
+        font-weight: bold;
+        height: auto;
+        padding: 1rem 0.25rem;
+
+        @include for-size(desktop-up) {
+          display: none;
+        }
+      }
+
+      &.desktop-only {
+        display: none;
+
+        @include for-size(desktop-up) {
+          display: table-cell;
+        }
+      }
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .button-reset {
+    font-weight: bold;
+    font-family: proxima-nova, sans-serif;
+
+    ion-icon {
+      font-size: 10px;
+      margin-left: 0.75rem;
+    }
+
+    &.desc {
+      ion-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .item-checkbox {
+    --apt212-checkbox-width: 14px;
+    --apt212-checkbox-height: 14px;
+
+    @include for-size(desktop-up) {
+      --apt212-checkbox-width: 10px;
+      --apt212-checkbox-height: 10px;
+    }
+  }
+
+  .view-listing {
+    ion-icon {
+      font-size: 18px;
+    }
+  }
+
+  .mobile-only {
+    .space {
+      padding-top: 0.5rem;
+
+      &.top {
+        padding-top: 0;
+      }
+    }
+
+    table.mobile-inner {
+      width: 100%;
+
+      tr {
+        border: 0;
+      }
+
+      td {
+        height: auto;
+        padding: 0;
+
+        &:first-child {
+          width: 125px;
+          min-width: 125px;
+        }
+
+        &:first-child {
+          padding: 0 1rem 0 0;
+        }
+      }
+    }
+  }
+}

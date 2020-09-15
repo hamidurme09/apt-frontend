@@ -1,0 +1,408 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.page-booking {
+  position: relative;
+  --background: #131314;
+
+  p, h1, h2, h3, h4 {
+    color: #f5f5f7;
+    text-transform: none;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .white {
+    height: 50px;
+    width: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #131414;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .contact {
+    text-decoration: none;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .payment-content-wrapper {
+    width: 100%;
+  }
+
+  .page-booking-body {
+    position: relative;
+    padding: 0;
+
+  }
+
+  .payment-section-wrapper {
+    position: relative;
+    min-height: 400px;
+
+
+    @include for-size(desktop-up) {
+      min-height: 746px;
+    }
+
+    &.payment-faq {
+      height: 920px;
+
+      @include for-size(desktop-up) {
+        height: 815px;
+      }
+    }
+  }
+
+  .payment-hero {
+
+    &.flex {
+      display: flex;
+    }
+
+    .title {
+      font-size: 21px;
+      text-align: center;
+      font-weight: 600;
+
+      @include for-size(desktop-up) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .payment-cta {
+    font-size: 16px;
+    padding: 1rem;
+    font-weight: normal;
+    color: white;
+    margin: 0 auto;
+    max-width: 400px;
+
+    @include for-size(desktop-up) {
+      position: relative;
+      bottom: 0;
+      max-width: 400px;
+      margin: 100px auto;
+      font-size: 16px;
+      padding: 0;
+    }
+
+    .payment-cta-list {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1rem;
+      line-height: 2;
+      font-weight: normal;
+      list-style-type: none;
+    }
+
+    .cta-logos {
+      justify-content: center;
+    }
+
+    .cta-logo {
+      max-width: 150px;
+
+      @include for-size(desktop-up) {
+        max-width: 190px;
+      }
+
+      &:last-child {
+        margin-left: 38px;
+      }
+    }
+  }
+
+  .payment-cta-form {
+    max-width: 450px;
+    margin: 0 auto;
+
+    form {
+      padding-top: 30px;
+    }
+
+    .input-inline {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-bottom: 14px;
+        padding-right: 14px;
+        color: white;
+      }
+    }
+
+    p {
+      line-height: 1.38;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  .payment-form-wrapper {
+    position: absolute;
+
+    @include for-size(desktop-up) {
+      height: 100%;
+      width: calc(475px + 81px);
+      right: max(1px, calc(100% - 1440px) / 2);
+      top: 0;
+    }
+
+    .payment-form {
+      background-color: white;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 14px 4px rgba(0,0,0,0.25);
+      padding: 18px;
+
+      color: black;
+      margin-top: 20px;
+      margin-right: 81px;
+
+      @include for-size(desktop-up) {
+        position: sticky;
+        top: 20px;
+        max-width: 475px;
+      }
+    }
+
+    &.desktop {
+      display: none;
+
+      @include for-size(desktop-up) {
+        display: block;
+      }
+    }
+
+    &.mobile {
+      width: calc(100% - 60px);
+      margin-left: 30px;
+      margin-right: 30px;
+
+      @include for-size(desktop-up) {
+        display: none;
+      }
+    }
+  }
+
+  .payment-info {
+    padding: 1rem;
+    padding-top: 30px;
+    max-width: 750px;
+
+    @include for-size(desktop-up) {
+      padding: 75px 0px 0px 41px;
+    }
+
+    h2 {
+      font-size: $font-size-lg;
+
+      @include for-size(desktop-up) {
+        font-size: $font-size-xl;
+      }
+    }
+
+    .sub-title {
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .payment-info-items {
+
+      @include for-size(desktop-up) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      .payment-info-item {
+        line-height: 1.5;
+
+        h3 {
+          text-transform: none;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .card-logos {
+      display: inline-block;
+      height: 44px;
+      margin-right: 8px;
+      margin-bottom: 16px;
+
+      @include for-size(desktop-up) {
+        max-height: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-bottom: 100px;
+
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .payment-booking {
+    padding-left: 16px;
+    padding-top: 40px;
+
+    @include for-size(desktop-up) {
+      padding-left: 41px;
+      padding-top: 100px;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: $font-size-lg;
+      font-weight: bold;
+      padding-bottom: 26px;
+
+      @include for-size(desktop-up) {
+        font-size: $font-size-xl;
+      }
+    }
+
+    .booking-process {
+      font-size: $font-size-lg;
+      line-height: 1.5;
+      padding-left: 16px;
+      align-items: flex-start;
+      padding-bottom: 24px;
+
+      @include for-size(desktop-up) {
+        line-height: 3;
+        align-items: center;
+      }
+    }
+
+    .icon {
+      margin-right: 20px;
+      margin-top: 8px;
+
+      lazy-image {
+        display: flex;
+        min-width: 22px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .payment-faq-wrapper {
+    padding-top: 33px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include for-size(desktop-up) {
+      padding-left: 48px;
+      padding-right: 50px;
+      padding-top: 81px;
+    }
+  }
+
+  .faq-item {
+    display: flex;
+    width: 100%;
+
+    .item {
+      flex-grow: 1;
+      line-height: 2.56;
+      font-size: 16px;
+
+      @include for-size(desktop-up) {
+        font-size: 18px;
+      }
+
+      .question {
+        font-weight: 900;
+
+        font-family: $font-strong;
+        padding-right: 70px;
+        padding-top: 20px; // mobile only
+        line-height: 1.5; // mobile only
+
+      }
+
+      .answer {
+        line-height: 1.5;
+        padding: 10px 70px 10px 0px;
+
+        @include for-size(desktop-up) {
+          padding: 0px 70px 0px 0px;
+        }
+      }
+    }
+
+    .icon {
+      padding-top: 20px;
+      font-size: 24px;
+    }
+  }
+
+  .faq-title {
+    font-size: 36px;
+  }
+
+  .faq-link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .faq-cta {
+    text-align: center;
+
+    @include for-size(desktop-up) {
+      text-align: left;
+    }
+  }
+
+  .mobile-booking-cta {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    height: 81px;
+    width: 100%;
+
+    box-shadow: 0 0 48px -11px rgba(0, 0, 0, 0.33);
+    background-color: white;
+    padding: 0 22px;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      height: 48px;
+    }
+
+    &.active {
+      display: flex;
+
+      @include for-size(desktop-up) {
+        display: none;
+      }
+    }
+  }
+
+  #booking-password {
+    background-color: #131414;
+    border: solid 2px #f5f5f7;
+    color: white;
+  }
+
+}

@@ -1,0 +1,1 @@
+const o={getNeighborhoodsLoaded:o=>!!o.taxonomy.loaded,getNeighborhoods:o=>[...o.taxonomy.neighborhoods],getRegions:o=>[...o.taxonomy.regions],getRegionById:(o,e)=>e.find(e=>e.id===o),getNeighborhoodById:(o,e)=>e.find(e=>e.id===o),getNeighborhoodsByRegionId:(o,e)=>e.filter(e=>e.region_id===o)};export{o as n};

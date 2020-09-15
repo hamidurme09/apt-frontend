@@ -1,0 +1,51 @@
+@import url('https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css');
+@import '../../styles/variables';
+
+.search-map-component {
+  width: 100%;
+  height: 100%;
+
+  .map-instance {
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-listing-marker {
+    width: 240px;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+
+    .mapboxgl-popup-content {
+      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.24);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+    }
+
+    &:hover {
+      z-index: 1;
+    }
+
+    &.hover {
+      z-index: 1;
+
+      .mapboxgl-popup-content {
+        background: $color-secondary-light;
+      }
+    }
+  }
+
+  .map-listing-details {
+    max-width: 320px;
+    width: 320px;
+
+    .mapboxgl-popup-tip {
+      display: none;
+    }
+
+    .mapboxgl-popup-content {
+      border-radius: 3px;
+      padding: 0;
+      background: transparent;
+    }
+  }
+}

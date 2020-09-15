@@ -1,0 +1,49 @@
+@import '../../styles/mixins';
+
+.media-logos {
+  display: none;
+  padding: 180px 0;
+
+  @include for-size(tablet-landscape-up) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  }
+
+  .logo-container {
+    display: inline-block;
+    text-align: left;
+
+    &.venturebeat,
+    &.marketwatch {
+      text-align: center;
+    }
+
+    &.usatoday,
+    &.business-insider {
+      text-align: right;
+    }
+
+    &.usatoday {
+      .media-logo {
+        height: 87px;
+      }
+
+      padding-bottom: 180px;
+    }
+
+    &.venturebeat {
+      height: 40px;
+    }
+  }
+
+  .media-logo {
+    display: block;
+    position: relative;
+    height: 45px;
+    object-fit: contain;
+
+    @include for-size(tablet-landscape-up) {
+      object-fit: contain;
+    }
+  }
+}

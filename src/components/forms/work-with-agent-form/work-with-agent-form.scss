@@ -1,0 +1,90 @@
+@import "../../../styles/variables";
+
+.work-with-agent-form-component {
+  
+  .agent-form-title {
+    text-align: center;
+  }
+
+  .agent-form-description {
+    padding-top: 12px;
+    padding-bottom: 17px;
+  }
+
+  .text-input {
+    border: solid 2px $bg-dark;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .agent-form-address div label,
+  .tell-us-more {
+    font-size: $font-size-sm;
+    font-weight: bold;
+  }
+
+  .agent-form-interested {
+    padding-bottom: 12px;
+  }
+
+  .agent-form-radiobuttons-container {
+    max-width: 420px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .agent-form-radio {
+      display: inline-block;
+      width: 135px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .agent-form-radio__button {
+      margin-right: 8px;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid $bg-dark;
+      -webkit-appearance: none;
+      outline: none;
+    }
+
+    .agent-form-check {
+      width: 9px;
+      height: 9px;
+      background-color: $bg-dark;
+      border-radius: 50%;
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      opacity: 0;
+    }
+    
+    .agent-form-radio__button:checked ~ .agent-form-check {
+      opacity: 1;
+    }
+
+    .agent-form-radio__label {
+      vertical-align: middle;
+    }
+  }
+
+  .tell-us-more {
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .textarea {
+    height: 110px;
+  }
+
+  .btnSubmit {
+    font-size: $font-size;
+    text-transform: capitalize;
+  }
+}

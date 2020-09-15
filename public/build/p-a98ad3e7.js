@@ -1,0 +1,1 @@
+const s={getWishlist:s=>[...s.wishlist.list]};export{s as w};

@@ -1,0 +1,1 @@
+const t={getIsMobile:t=>!!t.screenSize.isMobile,getHeight:t=>t.screenSize.height,getWidth:t=>t.screenSize.width};export{t as s};

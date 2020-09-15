@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.ask-question-component {
+  position: relative;
+  display: flex;
+
+
+  @include for-size(desktop-up) {
+
+  }
+
+  .content-left {
+    display: none;
+    width: 42%;
+
+    @include for-size(desktop-up) {
+      display: block;
+    }
+
+    p {
+      line-height: 1.38;
+    }
+
+    .people {
+      .person {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        width: 25%;
+        padding-top: 18px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 73px;
+        height: 73px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .content-right {
+    width: 100%;
+
+    @include for-size(desktop-up) {
+      width: auto;
+      flex-grow: 1;
+      padding: 0 20px;
+    }
+  }
+
+  .title {
+    font-size: $font-size-lg;
+    font-weight: bold;
+    text-align: center;
+  }
+}

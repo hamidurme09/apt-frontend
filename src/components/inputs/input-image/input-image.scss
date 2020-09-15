@@ -1,0 +1,22 @@
+.input-image-component {
+  .value {
+    .preview {
+      max-width: 150px;
+    }
+
+    .metadata {
+      flex-grow: 1;
+      padding: 16px;
+    }
+  }
+
+  .image-value {
+    padding-top: 8px;
+  }
+
+  .action {
+    button:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

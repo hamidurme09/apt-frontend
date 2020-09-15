@@ -1,0 +1,210 @@
+@import '../../../styles/mixins';
+
+.booking-form-component {
+
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  button {
+    border-radius: 6px;
+    font-size: 12px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .form-content {
+    &.submitted {
+      visibility: hidden;
+    }
+  }
+
+  .payment-method {
+    padding-top: 16px;
+    display: flex;
+    justify-content: center;
+
+    & > div:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    .subtext {
+      padding-top: 5px;
+      font-size: 8px;
+      font-weight: 600;
+    }
+  }
+
+  .button-toggles {
+    button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      height: 44px;
+      background-color: white;
+      color: black;
+      width: 123px;
+      padding: 0;
+
+      @include for-size(desktop-up) {
+        width: 157px;
+        font-size: 14px;
+      }
+
+      &.active {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  .payment-method-icon {
+    display: inline-block;
+    width: 16px;
+    margin-right: 8px;
+  }
+
+  .agent {
+    button {
+      height: 32px;
+      width: auto;
+      padding: 0;
+      width: 50%;
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  label {
+    font-size: 10px;
+    opacity: 0.8;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 6px;
+
+    &.inline {
+      display: inline;
+    }
+  }
+
+  .error {
+    label {
+      color: red;
+    }
+  }
+
+  input,
+  input[type="email"],
+  input[type="number"],
+  select,
+  .stripe-input {
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.5);
+    background-color: #ffffff;
+    width: 100%;
+  }
+
+  .error {
+    input,
+    input[type="email"],
+    input[type="number"],
+    select,
+    .stripe-input {
+      border: 1px solid red;
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & > :nth-child(odd) {
+      margin-right: 5px;
+    }
+
+    & > :nth-child(even) {
+      margin-left: 5px;
+    }
+  }
+
+  .tos {
+    display: inline-block;
+    margin-left: 10px;
+    padding-bottom: 3px;
+    --apt212-checkbox-border: 1px solid black;
+    --apt212-checkbox-border-radius: 2px;
+
+    label {
+      padding: 0;
+    }
+  }
+
+  .error .tos {
+    --apt212-checkbox-border: 1px solid red;
+  }
+
+  .tos-view {
+    font-size: 10px;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .stripe-input {
+    padding-top: 6px;
+    padding-left: 4px;
+  }
+
+  .credit-inputs {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  .thank-you-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.5;
+      padding: 0 40px;
+    }
+
+    ion-icon {
+      font-size: 120px;
+      color: #057365;
+    }
+  }
+
+  .tos-view {
+    padding-bottom: 6px;
+  }
+
+  .main-content {
+    position: relative;
+
+    &.hide {
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '../../../styles/mixins';
+
+.inquiry-form-component {
+  .columns {
+
+    @include for-size(desktop-up) {
+
+      padding-top: 25px;
+    }
+
+    &.columns-mobile {
+      padding-top: 0px;
+    }
+  }
+
+  .input {
+    padding-bottom: 0;
+
+    &.submit {
+      margin-top: 8px;
+    }
+  }
+
+  .markets {
+    width: 100%;
+    margin-bottom: 12px;
+    height: 135px;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .desktop-center {
+    text-align: left;
+
+    &p {
+      margin-top: 4px;
+    }
+
+    @include for-size(desktop-up) {
+      text-align: center;
+    }
+  }
+
+  .tell-more {
+    padding: 20px 0 25px;
+
+    @include for-size(desktop-up) {
+      padding: 0;
+    }
+  }
+
+  .right {
+    .input {
+      height: 100%;
+
+      textarea.apt212-input {
+        height: 172px;
+
+        @include for-size(desktop-up) {
+          height: calc(100% - 14px);
+        }
+      }
+    }
+  }
+
+  .apt212-radio__button {
+    height: 10px;
+    margin-right: 10px;
+    width: 1.1em;
+    height: 1.1em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .apt212-radio__button:checked {
+    background-color: #131414;
+  }
+
+  .apt212-radio {
+    display:block;
+    margin:15px auto;
+  }
+
+  .apt212-radio, .choose-message-caption {
+    margin-right: 20px;
+  }
+
+  .radiobuttons-container {
+      column-count: 3;
+      width: 250px;
+
+      @include for-size(tablet-portrait-up) {
+        width: 400px;
+      }
+  }
+
+  label.apt212-radio {
+    display:inline-block;
+    width: 200px;
+  }
+
+  .apt212-radio__label {
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  .interest {
+    margin-bottom: 0;
+  }
+
+
+}

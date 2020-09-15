@@ -1,0 +1,448 @@
+/* Document Level Styles */
+
+/*
+  The imports below are needed to include our light dom css for global styles such as fonts and colors.
+  You can comment out any of these imports if you do not need that css. For example, if you have your own
+  global font family css then you can comment out the typography.css import.
+*/
+
+/** Core CSS required for ionic components to work property */
+@import "~@ionic/core/css/core.css";
+
+/** Basic CSS for apps built with Ionic */
+@import "~@ionic/core/css/normalize.css";
+@import "~@ionic/core/css/structure.css";
+@import "~@ionic/core/css/typography.css";
+
+/** Optional CSS utils that can be commented out */
+// @import "~@ionic/core/css/padding.css";
+// @import "~@ionic/core/css/float-elements.css";
+// @import "~@ionic/core/css/text-alignment.css";
+// @import "~@ionic/core/css/text-transformation.css";
+// @import "~@ionic/core/css/flex-utils.css";
+
+/*
+  The CSS Variables below can be used to theme your app.
+  For more info on CSS variables check out:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+  More info about color theming using Ionic:
+  https://ionicframework.com/docs/theming/color-generator
+*/
+
+@import '../styles/variables';
+@import '../styles/mixins';
+@import '../styles/forms';
+
+html.md {
+  --ion-default-font: proxima-nova, sans-serif;
+}
+
+:root {
+  --ion-color-primary: #{$color-primary};
+  --ion-color-secondary: #{$color-secondary};
+  --ion-font-family: proxima-nova, sans-serif;
+  --ion-default-font: proxima-nova, sans-serif;
+  letter-spacing: 0;
+
+  page-search {
+    .header-inner {
+      .search-filters-wrapper {
+        @include for-size(desktop-up) {
+          position: initial;
+        }
+      }
+    }
+  }
+}
+
+
+/* visible to screen readers only - from bootstrap */
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+ion-button {
+  --background-hover: #{$color-primary-lighter} !important;
+  --border-radius: 0 !important;
+  --box-shadow: none !important;
+  --ion-default-font: proxima-nova, sans-serif !important;
+  --ion-font-family: proxima-nova, sans-serif !important;
+  letter-spacing: normal !important;
+  font-weight: bold;
+  font-size: $font-size-md;
+  letter-spacing: 0;
+
+  @include for-size(desktop-up) {
+    font-size: $font-size-sm;
+  }
+
+  &.reset {
+    color: $color-primary;
+    --background: transparent !important;
+    --background-hover: transparent !important;
+    --ripple-color: transparent !important;
+    --background-activated: transparent !important;
+    --color-activated: $color-primary;
+    letter-spacing: 0;
+    --box-shadow: none !important;
+  }
+}
+
+button {
+  font-size: $font-size-md;
+
+  @include for-size(desktop-up) {
+    font-size: $font-size-sm;
+  }
+}
+
+html {
+  font-size: $font-size; /* standard rem */
+  font-family: $font-default;
+  color: $color-text-dark;
+}
+
+h1 {
+  font-family: $font-strong;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2, h3, h4 {
+  font-family: $font-title;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  &.h1 {
+    font-family: $font-strong;
+  }
+}
+
+.flex-col-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .col-1of2 {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+
+.button-light,
+.button-dark {
+  display: inline-block;
+  background-color: white;
+  color: $color-primary;
+  font-weight: bold;
+  padding: 12px 18px;
+
+  &.outline {
+    border: 1px solid black;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-dark {
+  background-color: $color-primary;
+  color: white;
+  text-transform: uppercase;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.button-reset {
+  font-size: 100%;
+  font-family: proxima-nova, sans-serif;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  outline: 0;
+
+  &.has-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 100%;
+
+  @include for-size(tablet-portrait-up) {
+    padding: 0 3rem 0 3rem;
+  }
+
+  &.full {
+    max-width: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  &.no-margin {
+    padding: 0;
+  }
+}
+
+.boxshadow {
+  img {
+    box-shadow: 0 22px 40px 0 rgba(0, 0, 0, 0.28);
+  }
+}
+
+app-header, app-header-home, app-menu {
+  top: 0;
+  background-color: white;
+  z-index: 999;
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    height: $mobile-header-height;
+
+    @include for-size(tablet-portrait-up) {
+      padding-top: 2rem;
+    }
+
+    @include for-size(desktop-up) {
+      padding-top: 0;
+      height: $header-height;
+    }
+
+    .logo-link {
+      flex-grow: 1;
+
+      @include for-size(desktop-up) {
+        flex-grow: 0;
+      }
+    }
+
+    .logo {
+      height: 24px;
+      min-width: 126px;
+    }
+
+    .header-center {
+      height: 2px;
+
+      @include for-size(desktop-up) {
+        flex-grow: 1;
+      }
+    }
+
+    .menu {
+      --padding-start: 0.5rem;
+      --padding-end: 0;
+      --background-hover: transparent;
+      --ripple-color: transparent;
+      font-size: 16px;
+
+      @include for-size(desktop-up) {
+        --padding-start: 2rem;
+      }
+    }
+  }
+
+  .header-inner {
+    position: relative;
+
+    .search-filters-wrapper {
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+.chat {
+  --background-activated: #{$color-secondary};
+  --background-hover: #{$color-secondary};
+  --border-color: white;
+  --border-width: 1px;
+
+  @include for-size(desktop-up) {
+    margin-right: 30px;
+  }
+
+  .chat-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.text-lower {
+  text-transform: lowercase;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+ion-checkbox {
+  &.checkbox-checked:after {
+    content: '';
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+  }
+}
+
+ion-footer.no-footer-border {
+  &::before {
+    background-image: none;
+  }
+}
+
+
+.ask-question-modal,
+.site-menu {
+  .modal-wrapper {
+    @include for-size(desktop-up) {
+      --width: 500px;
+      --height: 800px;
+      --max-height: 100%;
+      --max-width: 100%;
+    }
+  }
+}
+
+.work-with-agent-modal {
+  .modal-wrapper {
+    @include for-size(desktop-up) {
+      --width: 500px;
+      --height: 720px;
+      --max-height: 100%;
+      --max-width: 100%;
+    }
+  }
+}
+
+.apt212-alert {
+  .modal-wrapper {
+    --width: 280px;
+    --height: 195px;
+    --max-height: 100%;
+    --max-width: 100%;
+  }
+}
+
+
+table.data-table {
+  width: 99%;
+
+  thead {
+    td {
+      font-weight: bold;
+      padding: 8px;
+      white-space: nowrap;
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1px solid #d8d8d8;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.03);
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #d8d8d8;
+      }
+    }
+
+    td {
+      padding: 8px;
+      border-left: 1px solid #d8d8d8;
+
+      &:last-child {
+        border-right: 1px solid #d8d8d8 !important;
+      }
+
+      button:not(:first-child) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  td, th {
+    &.desktop-only {
+      display: none;
+
+      @include for-size(desktop-up) {
+        display: table-cell;
+      }
+    }
+
+    &.mobile-only {
+
+      @include for-size(desktop-up) {
+        display: none;
+      }
+    }
+  }
+}
+
+// hide Olark on specific pages
+.page-listing {
+  #olark-wrapper {
+    display: none;
+  }
+}

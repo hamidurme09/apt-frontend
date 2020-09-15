@@ -1,0 +1,28 @@
+.building-type-filter {
+  position: relative;
+  width: 380px;
+  height: 304px;
+  padding: 1.5rem;
+  font-weight: bold;
+
+  apt212-checkbox {
+    padding-top: 2rem;
+    --apt212-margin-right: 1rem;
+    --apt212-checkbox-padding-top: 2rem;
+  }
+
+  star-rating {
+    padding-top: 5px;
+    margin-right: 1rem;
+  }
+
+  ion-button.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 9999;
+    --background-hover: transparent;
+    --padding-end: 0;
+    --ripple-color: transparent;
+  }
+}

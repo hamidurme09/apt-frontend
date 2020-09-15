@@ -1,0 +1,309 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.page-listing-body-component {
+  .listing-main {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .listing-right {
+      display: none;
+      min-width: 480px;
+      width: 480px;
+      margin-right: 45px;
+      z-index: 1;
+
+      @include for-size(desktop-up) {
+        display: block;
+        margin-left: 10px;
+      }
+
+      &.has-slider {
+        margin-top: -72px;
+      }
+    }
+
+    .listing-left {
+      flex-grow: 1;
+    }
+
+    .listing-description {
+      @include for-size(desktop-up) {
+        padding-right: 40px;
+      }
+    }
+
+    .listing-price {
+      display: flex;
+      align-items: center;
+      font-size: $font-size;
+      font-weight: 900;
+      height: 72px;
+      background-color: rgba(0,0,0,0.74);
+      color: white;
+      padding-left: 19px;
+
+      .rate {
+        display: inline-block;
+        font-size: $font-size-xl;
+        font-weight: 900;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  .stickyblock {
+    position: sticky;
+    top: 0;
+  }
+
+  .checkin-form {
+    position: relative;
+    border: 1px solid $color-primary;
+    border-top: 0;
+    padding: 20px;
+
+    .available-date {
+      font-size: $font-size;
+      font-weight: 900;
+      padding-bottom: 1rem;
+
+        .date {
+          font-size: $font-size-xl;
+          font-weight: 900;
+          padding-right: 5px;
+        }
+    }
+  }
+
+  .wishlist-share {
+    margin-top: 20px;
+    display: flex;
+
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      font-size: 20px;
+
+      img {
+        margin-right: 1rem;
+        width: 18px;
+
+        &.share-icon {
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .listing-description {
+    h1 {
+      font-size: $font-size-lg;
+      font-weight: bold;
+      font-family: $font-default;
+
+      @include for-size(desktop-up) {
+        margin-top: 48px;
+      }
+    }
+
+    p {
+      font-size: $font-size;
+      color: #060606;
+    }
+  }
+
+  .listing-section {
+    width: 100%;
+    margin-top: 50px;
+
+    @include for-size(desktop-up) {
+      max-width: 591px;
+    }
+
+    &.full-width {
+      max-width: 100%;
+    }
+
+    .title {
+      height: 38px;
+      display: flex;
+      align-content: center;
+      font-size: $font-size-lg;
+      font-weight: bold;
+      border-bottom: 2px solid $color-primary;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .full-img {
+      width: 100%;
+    }
+
+    .listing-video {
+      --youtube-video-object-fit: cover;
+    }
+  }
+
+  .feature {
+    min-height: 72px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #929292;
+
+    &.feature-0 {
+      margin-top: -25px;
+    }
+
+    .feature-name {
+      flex-grow: 1;
+      white-space: nowrap;
+
+      .feature-icon {
+        width: 18px;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+
+    .feature-value {
+      text-align: right;
+
+      @include for-size(desktop-up) {
+        padding-right: 1.5rem;
+      }
+
+      star-rating {
+        margin-top: 2px;
+        margin-right: 10px;
+      }
+
+      .building-type {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+    .subway-icon {
+      width: 25px;
+      margin-left: 4px;
+    }
+  }
+
+  .amenity,
+  .booking-process {
+    font-size: 17px;
+    line-height: 1.88;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+
+    @include for-size(desktop-up) {
+      width: 33%;
+    }
+
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 37px;
+
+      lazy-image {
+        display: block;
+        width: 20px;
+        height: 23px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .booking-process {
+    display: flex;
+    width: 100%;
+
+    .icon {
+      width: 50px;
+
+      lazy-image {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .neighborhood {
+    display: block;
+
+    @include for-size(desktop-up) {
+      display: flex;
+    }
+
+    .description {
+      margin-top: 1.5rem;
+
+      @include for-size(desktop-up) {
+        flex-grow: 1;
+        margin-top: 0;
+        padding-left: 50px;
+      }
+
+      a.button-dark {
+        display: block;
+        width: 204px;
+        text-align: center;
+        font-size: $font-size-md;
+        text-transform: uppercase;
+        margin-top: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .neighborhood-image {
+    width: 100%;
+
+    @include for-size(desktop-up) {
+      width: 271px;
+      min-width: 271px;
+    }
+  }
+
+  .nearby-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .show-all {
+    display: inline-block;
+    padding-top: 0.5rem;
+    font-weight: 900;
+  }
+}
+
+.seasonal-rates-modal {
+  .modal-wrapper {
+    --width: 734px;
+    --height: 787px;
+    --max-height: 100%;
+    --max-width: 100%;
+  }
+}
+
+.share-listing-modal {
+  .modal-wrapper {
+    --width: 482px;
+    --height: 491px;
+    --max-height: 100%;
+    --max-width: 100%;
+  }
+}
+
+.booking-details-modal {
+  .modal-wrapper {
+    --width: 784px;
+    --height: 815px;
+    --max-width: 100%;
+    --max-height: 100%;
+  }
+}

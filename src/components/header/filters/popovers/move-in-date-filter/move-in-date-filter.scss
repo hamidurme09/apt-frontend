@@ -1,0 +1,27 @@
+.move-in-date-filter {
+  position: relative;
+  width: 360px;
+  height: 344px;
+  padding: 1.5rem;
+
+  .picker {
+    margin-top: -0.5rem;
+  }
+
+  .disclaimer {
+    position: absolute;
+    bottom: 1rem;
+    left: 2.275rem;
+    font-weight: bold;
+  }
+
+  ion-button.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 9999;
+    --background-hover: transparent;
+    --padding-end: 0;
+    --ripple-color: transparent;
+  }
+}

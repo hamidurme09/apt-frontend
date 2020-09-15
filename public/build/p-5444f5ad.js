@@ -1,0 +1,1 @@
+const e={getIsLoading:e=>!!e.auth.loading,getLoginError:e=>e.auth.error,getUser:e=>Object.assign({},e.auth.user),getAccessToken:e=>e.auth.access_token,isLoggedIn:n=>{const t=e.getUser(n),s=e.getAccessToken(n);return t.hasOwnProperty("id")&&!!s.length},isAdmin:n=>{const t=e.getUser(n);return!(!t.roles||!t.roles.length||!t.roles.find(e=>"admin"===e.slug))}};export{e as a};

@@ -1,0 +1,1 @@
+System.register([],(function(e){"use strict";return{execute:function(){var t={getIsMobile:function(e){return!!e.screenSize.isMobile},getHeight:function(e){return e.screenSize.height},getWidth:function(e){return e.screenSize.width}};e("s",t)}}}));

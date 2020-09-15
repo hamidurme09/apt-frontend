@@ -1,0 +1,1 @@
+import{A as a}from"./p-1ba263c2.js";import{s as o}from"./p-5628850f.js";function s(s){return async(t,n)=>{t({type:a.ADD_TO_WISHLIST,payload:s});const r=n();o(r)}}function t(s){return async(t,n)=>{t({type:a.REMOVE_FROM_WISHLIST,payload:s});const r=n();o(r)}}export{s as a,t as r};

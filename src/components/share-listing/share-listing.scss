@@ -1,0 +1,122 @@
+@import '../../styles/mixins';
+
+.share-listing-component {
+  .hidden {
+    display: none;
+  }
+
+  .share-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 54px;
+
+    @include for-size(desktop-up) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+      margin-bottom: 30px;
+
+      & > :first-child {
+        margin-right: 50px;
+      }
+    }
+
+    button {
+      font-weight: bold;
+
+      &:first-child {
+        margin-bottom: 24px;
+
+        @include for-size(desktop-up) {
+          margin-bottom: 0;
+        }
+      }
+
+      img {
+        margin-right: 0.75rem;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input.text {
+    height: 40px;
+    border: 1px solid black;
+    margin-bottom: 24px;
+    width: 100%;
+
+    &::placeholder {
+      color: black;
+    }
+
+    @include for-size(desktop-up) {
+      height: 33px;
+      border: 1px solid #979797;
+    }
+
+    &.error {
+      border-color: red;
+    }
+  }
+
+  label {
+    display: block;
+    padding-bottom: 3px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 184px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+    padding: 5px 12px;
+
+    &::placeholder {
+      color: black;
+    }
+
+    @include for-size(desktop-up) {
+      height: 92px;
+      border: 1px solid #979797;
+    }
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+
+    @include for-size(desktop-up) {
+      width: 124px;
+      height: 35px;
+    }
+  }
+
+  .email-input {
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 18px;
+      top: 15px;
+      right: 10px;
+
+      @include for-size(desktop-up) {
+        top: 10px;
+      }
+    }
+  }
+}

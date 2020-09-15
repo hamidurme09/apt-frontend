@@ -1,0 +1,84 @@
+@import '../../styles/mixins';
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+@mixin glideArrow {
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  width: 36px;
+  height: 44px;
+  padding: 0;
+  z-index: 20;
+
+  top: 50%;
+
+  @include for-size(tablet-landscape-up) {
+    width: 40px;
+    height: 56px;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+$arrow-left-left: -10px;
+$arrow-right-right: -10px;
+
+.neighborhood-slider.glide {
+
+  .glide__track {
+    transform: translateZ(0px);
+    transform: translate3d(0,0,0);
+    perspective: 1000;
+  }
+
+  .glide__arrow {
+    @include glideArrow();
+  }
+
+  .glide__arrow--right {
+    right: $arrow-right-right;
+
+    @include for-size(tablet-landscape-up) {
+      right: $arrow-right-right * 2;
+    }
+  }
+
+  .glide__arrow--left {
+    left: $arrow-left-left;
+
+    @include for-size(tablet-landscape-up) {
+      left: $arrow-left-left * 2;
+    }
+  }
+
+  .left-arrow-click-jacker {
+    @include glideArrow();
+
+    left: $arrow-left-left;
+    opacity: 0;
+
+    @include for-size(tablet-landscape-up) {
+      left: $arrow-left-left * 2;
+    }
+  }
+
+  .right-arrow-click-jacker {
+    @include glideArrow();
+
+    right: $arrow-right-right;
+    opacity: 0;
+
+    @include for-size(tablet-landscape-up) {
+      right: $arrow-right-right * 2;
+    }
+  }
+}

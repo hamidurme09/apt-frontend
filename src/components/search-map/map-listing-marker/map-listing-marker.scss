@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+:host {
+  cursor: pointer;
+}
+
+.map-listing-marker {
+
+  a {
+    cursor: pointer;
+    font-size: $font-size-md;
+    font-weight: bold;
+    font-family: $font-default;
+    white-space: nowrap;
+  }
+
+  .hover-card {
+    position: absolute;
+    margin-top: -40px;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.8);
+    padding: 0.25rem 1rem;
+    border-radius: 6px;
+    color: white;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .hover-card {
+      visibility: visible;
+    }
+  }
+}

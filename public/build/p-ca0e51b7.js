@@ -1,0 +1,1 @@
+const t={getBooking:t=>[...t.booking],getGuests:t=>t.booking.guests,getCheckinDate:t=>t.booking.checkinDate,getCheckoutDate:t=>t.booking.checkoutDate,getApartmentId:t=>t.booking.apartmentId,getBookingDetails:t=>t.booking.bookingDetails?Object.assign({},t.booking.bookingDetails):null};export{t as b};

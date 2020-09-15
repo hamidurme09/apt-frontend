@@ -1,0 +1,75 @@
+@import '../../../../styles/mixins';
+
+.filter-tags-component {
+  display: flex;
+  justify-content: flex-end;
+  // visibility: hidden;
+
+  &.initialized {
+    visibility: visible;
+  }
+
+  .tags {
+    display: none;
+    width: 100%;
+    text-align: right;
+    overflow: hidden;
+
+    @include for-size(desktop-up) {
+      display: block;
+    }
+
+    filter-tag {
+      // visibility: hidden;
+      display: inline-block;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+
+    button {
+      white-space: nowrap;
+    }
+
+    .clear-filters {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-decoration: none;
+
+      @include for-size(desktop-up) {
+        display: none;
+      }
+    }
+
+    .show-all-mobile {
+      @include for-size(desktop-up) {
+        display: none;
+      }
+    }
+
+    .show-all {
+      display: none;
+
+      &.visible {
+        @include for-size(desktop-up) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .tag-measurement {
+    position: absolute;
+    margin-top: -400px;
+    visibility: hidden;
+
+      filter-tag {
+        display: inline-block;
+      }
+  }
+}

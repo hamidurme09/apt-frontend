@@ -1,0 +1,319 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.page-agent {
+
+  p, h2 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: $font-size-20;
+    color: $bg-dark;
+    text-transform: capitalize;
+
+    @include for-size(tablet-portrait-up) {
+      font-size: $font-size-28;
+    }
+  }
+
+  .section-agent {
+    padding: 50px 0px 40px 0px;
+    display: grid;
+
+    @include for-size(tablet-portrait-up) {
+      grid-gap: 136px;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      padding: 50px 20px 100px 20px;
+    }
+
+    .agent-left {
+
+      .imageAgent {
+        width: 90%;
+        height: 185px;
+        padding: 0px 18px;
+
+        @include for-size(tablet-portrait-up) {
+          height: 360px;
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      ion-button {
+        width: 100%;
+        height: 90px;
+        color: $bg-dark;
+        font-size: $font-size;
+        font-weight: bold;
+        margin-top: 32px;
+        text-transform: capitalize;
+        border: solid 1px $bg-dark;
+        cursor: pointer;
+      }
+
+      .watch-icon {
+        margin-left: 10px;
+      }
+    }
+
+    .agent-right {
+
+      .agent-right-person {
+        width: 90%;
+        padding: 0px 18px;
+
+        h2 {
+          padding-bottom: 8px;
+          padding-top: 16px;
+        }
+
+        p {
+          padding-bottom: 8px;
+        }
+
+        @include for-size(tablet-portrait-up) {
+          width: 100%;
+          padding: 0;
+
+          h2 {
+            padding: 0;
+            padding-bottom: 8px;
+          }
+
+          p {
+            font-size: $font-size-20;
+            padding-bottom: 40px;
+          }
+        }
+      }
+
+      .agent-right-descriptionTop {
+
+        p {
+          padding-bottom: 25px;
+        }
+      }
+
+      ion-button {
+        width: 100%;
+        height: 55px;
+        color: $bg-dark;
+        font-size: $font-size;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: solid 1px $bg-dark;
+        cursor: pointer;
+      }
+
+      .watch-icon {
+        margin-left: 10px;
+      }
+
+      .workButton {
+        text-align: center;
+        margin-top: 15px;
+
+        @include for-size(tablet-portrait-up) {
+          margin-top: 7px;
+        }
+
+        .workBtn {
+          width: 100%;
+          height: 55px;
+          background-color: $bg-dark;
+          font-size: $font-size;
+          color: $color-text-light;
+          border-radius: 0;
+          font-weight: bold;
+          text-align: center;
+          text-transform: capitalize;
+
+          @include for-size(tablet-portrait-up) {
+            width: 182px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .agent-card-header,
+  .rating-review-header {
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+
+    @include for-size(tablet-portrait-up) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .agent-card-title {
+    text-transform: capitalize;
+
+    @include for-size(tablet-portrait-up) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .agent-card-mt {
+    @include for-size(tablet-portrait-up) {
+      margin-top: 60px;
+    }
+  }
+
+  .agent-card-recentTransaction {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: $color-agent-bg;
+    padding: 6px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    @include for-size(tablet-portrait-up) {
+      padding: 43px 0px;
+      margin-top: 80px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .workButton {
+    text-align: center;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 32px;
+    }
+
+    .workBtn {
+      width: 100%;
+      height: 55px;
+      background-color: $bg-dark;
+      font-size: $font-size;
+      color: $color-text-light;
+      border-radius: 0;
+      font-weight: bold;
+      text-align: center;
+      text-transform: capitalize;
+
+      @include for-size(tablet-portrait-up) {
+        width: 182px;
+        height: 50px;
+      }
+    }
+  }
+
+  .section-rating-review {
+    
+    .rating-review {
+      max-width: 780px;
+      margin: 40px auto 0 auto;
+
+      @include for-size(tablet-portrait-up) {
+        margin: 100px auto 0 auto;
+      }
+    }
+
+    .rating-review-header {
+      margin-bottom: 24px;
+
+      @include for-size(tablet-portrait-up) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .all-review {
+      font-weight: bold;
+      font-size: $font-size;
+      margin-bottom: 16px;
+
+      @include for-size(tablet-portrait-up) {
+        font-size: $font-size-20;
+        margin-bottom: 30px;
+      }
+    }
+
+    .review {
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+
+      @include for-size(tablet-portrait-up) {
+        margin-bottom: 80px;
+      }
+    }
+
+    .star-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      @include for-size(tablet-portrait-up) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .star-rating {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .date {
+      color: $color-grey-light;
+    }
+
+    .recommend {
+      margin-bottom: 16px;
+
+      span {
+        text-transform: lowercase;
+      }
+    }
+
+    .commenter {
+      font-weight: bold;
+    }
+
+    .load-more {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: -25px;
+
+      @include for-size(tablet-portrait-up) {
+        margin-top: -45px;
+      }
+    }
+
+    .arrow-right {
+      margin-top: 3px;
+      margin-left: 7px;
+    }
+
+    .review-btn {
+      text-align: center;
+
+      ion-button {
+        height: 50px;
+        width: 100%;
+        margin-top: 16px;
+        color: $bg-dark;
+        font-size: $font-size;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: solid 1px $bg-dark;
+        cursor: pointer;
+
+        @include for-size(tablet-portrait-up) {
+          width: 155px;
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

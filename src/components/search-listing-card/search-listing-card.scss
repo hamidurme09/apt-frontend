@@ -1,0 +1,119 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.search-listing-card {
+  padding-bottom: 15px;
+
+  .listing-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 16px;
+    position: relative;
+
+    @include for-size(desktop-up) {
+      margin-bottom: 0;
+      height: 28px;
+    }
+
+    ion-router-link {
+      position: absolute;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      font-size: $font-size-lg;
+      text-transform: none;
+
+    }
+  }
+
+  .neighborhood {
+    margin-bottom: 10px;
+  }
+
+  .price,
+  .available {
+    font-size: $font-size-md;
+    padding-bottom: 0.5rem;
+  }
+
+  .bed-bath {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-sm;
+    padding-bottom: 0.5rem;
+
+    @include for-size(desktop-up) {
+      font-size: $font-size-md;
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+    }
+
+    .divider {
+      padding: 0 1rem;
+
+      @include for-size(desktop-up) {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  .bedrooms,
+  .bathrooms {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.25rem;
+
+    @include for-size(desktop-up) {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .bedrooms {
+    margin-top: -1px;
+  }
+
+  .bathrooms {
+    margin-top: -3px;
+  }
+
+  .rating-amenities {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-sm;
+
+    @include for-size(desktop-up) {
+      font-size: $font-size-md;
+    }
+
+    .amenities {
+      padding-left: 0.5rem;
+      padding-bottom: 4px;
+    }
+
+    apt212-checkbox {
+      --apt212-checkbox-width: 18px;
+      --apt212-checkbox-height: 18px;
+    }
+  }
+
+  .listing-content-padding {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .apt212-checkbox .checkbox {
+    --apt212-checkbox-bg-color: white;
+    --apt212-checkbox-border: 1px solid black;
+  }
+
+  .gallery {
+    position: relative;
+    height: 100%;
+  }
+}

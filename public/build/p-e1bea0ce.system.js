@@ -1,0 +1,1 @@
+System.register([],(function(e){"use strict";return{execute:function(){var i=function(e){if(typeof e==="number"){return e-e===0}if(typeof e==="string"&&e.trim()!==""){return Number.isFinite?Number.isFinite(+e):isFinite(+e)}return false};e("i",i)}}}));

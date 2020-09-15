@@ -1,0 +1,1 @@
+import{r as t,h as r}from"./p-f5b6b644.js";const o=class{constructor(r){t(this,r)}render(){return r("div",{class:"work-with-agent-component"},r("work-with-agent-form",null))}static get style(){return".work-with-agent-component{position:relative;display:-ms-flexbox;display:flex;padding:38px}"}};export{o as work_with_agent};

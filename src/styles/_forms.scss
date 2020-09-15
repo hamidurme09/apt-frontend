@@ -1,0 +1,101 @@
+form {
+  fieldset {
+    margin-bottom: 16px;
+    min-width: 0;
+  }
+
+  .input {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  input,
+  input[type="email"],
+  input[type="submit"] {
+      border: 0;
+      height: 47px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &.block {
+        width: 100%;
+      }
+
+      &[disabled] {
+        background-color: #cccccc;
+      }
+  }
+
+  .help-text {
+    font-size: 0.6rem;
+  }
+
+  &.dark {
+    input,
+    input[type="email"] {
+      background-color: #353535;
+      color: white;
+      border: 1px solid white;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    .help-text {
+      color: white;
+      opacity: 0.3;
+    }
+
+    input[type="submit"] {
+      background-color: white;
+      color: $color-primary;
+    }
+  }
+
+  input.apt212-input {
+    height: 48px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+
+    &.block {
+      display: block;
+      width: 100%;
+      margin-bottom: 14px;
+    }
+
+    &[disabled] {
+      background-color: #ececec;
+    }
+  }
+
+  textarea.apt212-input {
+    width: 100%;
+    height: 184px;
+    border: 1px solid black;
+    padding: 5px 12px;
+  }
+
+  select.apt212-input {
+    height: 48px;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 12px;
+
+    &.block {
+      display: block;
+      width: 100%;
+      margin-bottom: 14px;
+    }
+  }
+
+  .error {
+    textarea.apt212-input,
+    input.apt212-input,
+    select.apt212-input {
+      border-color: red;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../../styles/variables';
+
+.mobile-filter-menu {
+  position: relative;
+
+  ion-list {
+    padding-top: 0;
+  }
+
+  ion-button.close {
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+    font-size: $font-size;
+    --padding-end: 0;
+  }
+
+  ion-item {
+    --min-height: 64px;
+    --padding-start: 0;
+    --inner-padding-start: 1.5rem;
+    --detail-icon-opacity: 1;
+
+    &:not(.header) {
+      --background: #fafafa;
+    }
+
+    &.search {
+      --background: #{$color-primary};
+      --color: white;
+      --detail-icon-color: white;
+      --background-activated: #{$color-primary};
+      --background-hover: #{$color-primary};
+    }
+
+    &.mobile-filter-menu-back {
+      --background: transparent;
+    }
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ion-title {
+    padding-left: 0;
+  }
+
+  .bed-bath-header {
+    padding: 0 1rem 1rem 2rem;
+
+    ion-button:last-child {
+      margin-left: 1rem;
+      font-weight: bold;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &.menu {
+    ion-title {
+      padding-left: 1.25rem;
+    }
+  }
+
+  &.beds-baths {
+    bathroom-filter {
+      margin-top: -6rem;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+function r(r,e="long"){if(!r)return"";switch(e){case"short":return r.rooms_count<1?r.name:`${r.name} BD`;case"long":default:return r.rooms_count<1?r.name:`${r.name} Bedroom`}}export{r as g};
